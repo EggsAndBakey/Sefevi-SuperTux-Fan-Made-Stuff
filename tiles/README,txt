@@ -1,0 +1,8 @@
+It should be pretty easy to set these up.
+Put the strf file in an images folder, and put the tileset png(s) in the tiles folder, in their own folder, like for example:
+images/customtiles.strf
+images/tiles/customtilesfolder/customtiles.png
+
+if it's 2 images or more, put the 2nd image where the 1st image is.
+
+have a good day
