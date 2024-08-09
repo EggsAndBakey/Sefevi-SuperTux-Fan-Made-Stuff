@@ -1,0 +1,106 @@
+;; -*- scheme -*-
+;; This file contains the mapping from tile-ids to images files as well
+;; as the tile properties (unisolid, solid, ice, water, etc.). Since
+;; it is important that the tile-ids don't change once created and
+;; used in a level some care has to be taken when editing this file,
+;; otherwise the levels would be rendered unusable.
+;;
+;; Some notes on editing this file:
+;;  - tile-ids must be unique
+;;  - the tile definition with the largest id should always be at the
+;;    bottom of the file
+;;  - when creating a new tile definition take the greatest current id
+;;    and increment it by one
+;;  - the meaning of the values in (attributes ...) can be seen in
+;;    src/tile.cpp, unisolid is 3 not 2
+
+(supertux-tiles
+  (autotileset
+    (source "autotiles.satc")
+  )
+
+  ;; next-id: 7312
+  ;; free/skipped ids (please use before any other): 101
+  ;; 2080-2084 are empty tiles, 4619-4660, 4719-4722, 5037-5092, 5205, 5268-5283, 5433-5527, 6962-6977, 7002 7005 7007 7008 7173
+  ;; No group ids are currently skipped! Delete this line if any are and replace it with said ids...
+
+  (tilegroup
+    (name (_ "[Parallax Snow Background]"))
+    (tiles
+      7312 7313 7314 7317
+      7318 7328 7328 7323
+      7351 7352 7352 7353
+
+      7336 7346 0    0
+      7340 7342 0    0
+      
+      7354 7355 7356 7357
+
+      7321 7322 7325 7326
+      7319 7320 7327 7334
+      0    0    7338 7339
+
+      7329 0    0    0
+      7335 0    0    0
+      7341 0    0    0
+      7347 0    0    0
+
+      7331 7332 7332 7333
+      7348 7349 7349 7350
+      7344 7345 0    0
+      
+      7358 7359 0    0
+
+      7324 7330 0    0
+
+      7315 7316 0    0
+
+
+    )
+  )
+
+  (tiles
+    (width 6)(height 7)
+    (ids
+      7312 7313 7314 7315 7316 7317
+      7318 7319 7320 7321 7322 7323
+      7324 7325 7326 7327 7328 7329
+      7330 7331 7332 7333 7334 7335
+      7336 7337 7338 7339 7340 7341
+      7342 7343 7344 7345 7346 7347
+      7348 7349 7350 7351 7352 7353
+    )
+    (attributes
+      0 0 0 0 0 0
+      0 0 0 0 0 0
+      0 0 0 0 0 0
+      0 0 0 0 0 0
+      0 0 0 0 0 0
+      0 0 0 0 0 0
+      0 0 0 0 0 0
+    )
+    (images "tiles/bgsnow/normal.png")
+  )
+
+  (tiles
+    (width 4)(height 2)
+    (ids
+      7354 7355 7356 7357
+      7358 7359 7360 7361
+    )
+    (attributes
+      0 0 0 0
+      0 0 0 0
+    )
+    (images "tiles/bgsnow/special.png")
+  )
+
+  
+  ;; The end of the stuff
+
+;; -----------------------------------------------------------------
+  (import-tileset
+      (file "/images/tiles.strf")
+  )
+)
+
