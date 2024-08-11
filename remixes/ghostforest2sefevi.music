@@ -1,0 +1,5 @@
+(supertux-music
+  (file "ghostforest2sefevi.ogg")
+  (loop-begin 0)
+  (loop-at    91)
+)
